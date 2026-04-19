@@ -22,15 +22,7 @@ const fizzbuzzCalc = (input: number) => {
 
 // fizzbuzzCalc(12);
 
-// 3. Find the Largest Number in an Array
-// Task: Given an array of integers, return the largest value.
-
-// Input: int[] nums
-// Output: integer
-// Constraints: Array will have at least one element.
-// Edge Case: Array with all negative numbers.
-// Hint: Initialize a variable with the first element of the array.
-
+// 3.Largest Number in an Array
 const largestInArray = (input: number[]) => {
   let largest = input[0];
   for (let i = 1; i < input.length; i++) {
@@ -44,10 +36,23 @@ const largestInArray = (input: number[]) => {
 // largestInArray([12, 23, 23, 4, 34, 3, 4]);
 
 // 4. Check for Palindrome
-// Task: Determine if a word reads the same forward and backward.
+const checkPalindrome = (s: string): boolean => {
+  const cleaned: string = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const reversed: string = cleaned.split("").reverse().join("");
+  return cleaned === reversed;
+};
 
-// Input: string s
-// Output: boolean
-// Constraints: Case-insensitive, ignore non-alphanumeric characters if you want a challenge.
-// Edge Case: "racecar" (true) vs "hello" (false).
-// Hint: Compare the string with its reverse.
+// console.log(checkPalindrome("racecar"));
+
+// 5. Sum of Array Elements
+ 
+
+const sumOfArray = (input: number[]) => {
+  let total = 0;
+  for (let index = 0; index < input.length; index++) {
+    total += input[index];
+  }
+  console.log(total);
+};
+
+sumOfArray([]);
